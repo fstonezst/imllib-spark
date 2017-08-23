@@ -166,7 +166,9 @@ object GradientDescentFFM {
         },
         combOp = (c1, c2) => {
           (c1._1 + c2._1, c1._2 + c2._2)
-        }) // TODO: add depth level
+        },
+        depth = 4
+      ) // TODO: add depth level
 
       weights = Vectors.dense(wSum.toArray.map(_ / slices))
       stochasticLossHistory += lSum / slices
