@@ -33,7 +33,7 @@ object LRWithAdaExample extends App {
       }
       // Get evaluation metrics.
       val metrics = new MulticlassMetrics(predictionAndLabels)
-      val accuracy = metrics.accuracy
+      val accuracy = metrics.precision
       println(s"Accuracy = $accuracy, time elapsed: $elapsedTime millisecond.")
     }
     training.unpersist()
